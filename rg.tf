@@ -11,4 +11,4 @@ module "resource-group-eastus" {
  # rg-name = var.prov-rg-name
  # rg-location = "centralus"
   # insert required variables here
-}
+# }
