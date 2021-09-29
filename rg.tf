@@ -1,8 +1,8 @@
-module "resource-group-eastus" {
+module "resource-group-new" {
   source  = "app.terraform.io/Pooja1892/resource-group/azurerm"
   version = "1.0.0"
   rg-name = var.prov-rg-name
-  rg-location = "eastus2"
+  rg-location = var.prov-rg-location
   # insert required variables here
 }
  # module "resource-group-centralus" {
