@@ -1,5 +1,5 @@
 module "resource-group-new" {
-  source  = "app.terraform.io/Pooja1892/resource-group/azurerm"
+  source  = "app.terraform.io/Pooja1892/resource-group-new/azurerm"
   version = "1.0.2"
   rg-name = var.prov-rg-name
   rg-location = var.prov-rg-location
