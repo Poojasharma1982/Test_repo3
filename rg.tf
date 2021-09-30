@@ -11,3 +11,11 @@
   rg-eastus2-name = var.prov-rg-eastus2-name
   # insert required variables here
 }
+module "vnet-module" {
+  source  = "app.terraform.io/Pooja1892/vnet-module/azurerm"
+  version = "1.1.2"
+  vnet_name = var.prov-vnet_name
+  vnet_address = var.prov-vnet_address
+  rg_name = 
+  # insert required variables here
+}
