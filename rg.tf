@@ -16,6 +16,6 @@ module "vnet-module" {
   version = "1.1.2"
   vnet_name = var.prov-vnet_name
   vnet_address = var.prov-vnet_address
-  rg_name = 
+  rg_name = var.prov-rg-eastus2-name
   # insert required variables here
 }
