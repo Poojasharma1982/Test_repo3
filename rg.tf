@@ -19,3 +19,12 @@ module "vnet-module" {
   rg_name = var.prov-rg-eastus2-name
   # insert required variables here
 }
+  
+  module "subnet" {
+  source  = "app.terraform.io/Pooja1892/subnet/azurerm"
+  version = "1.0.1"
+  subnet1-name = var.prov-subnet1-name
+  vnet-name =var.prov-vnet-name
+  rg-name = var.prov-rg-eastus2-name
+  # insert required variables here
+}
