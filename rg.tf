@@ -16,16 +16,16 @@ module "vnet-module" {
   version = "1.1.4"
   vnet_name = var.prov-vnet_name
   vnet_address = var.prov-vnet_address
-  rg_name = var.prov-rg-eastus2-name
+  rg_name = module.resource-rg-module.rg-name
   # insert required variables here
 }
   
   module "subnet" {
   source  = "app.terraform.io/Pooja1892/subnet/azurerm"
   version = "1.0.7" 
-  vnet_name_new =var.prov-vnet_name
+  vnet_name_new =module.vnet-module.vnet-name
   #vnet_address_new = var.prov-vnet_address
-  rg_name_new = var.prov-rg-eastus2-name
+  rg_name_new = module.resource-rg-module.rg-name
   subnet1-name = var.prov-subnet1-name
   subnet1-address = var.prov-subnet1-address
   # insert required variables here
