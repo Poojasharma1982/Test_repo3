@@ -26,7 +26,6 @@ module "vnet-module" {
   vnet_name_new =var.prov-vnet_name
   vnet_address_new = var.prov-vnet_address
   rg_name_new = var.prov-rg-eastus2-name
-  vnet_address_new = var.prov-vnet_address
   subnet1-name = var.prov-subnet1-name
   subnet1-address = var.prov-subnet1-address
   # insert required variables here
