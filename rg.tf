@@ -7,13 +7,13 @@
 # }
     module "resource-rg-module" {
   source  = "app.terraform.io/Pooja1892/resource-rg-module/azurerm"
-  version = "1.0.5"
+  version = "1.0.6"
   rg-eastus2-name = var.prov-rg-eastus2-name
   # insert required variables here
 }
 module "vnet-module" {
   source  = "app.terraform.io/Pooja1892/vnet-module/azurerm"
-  version = "1.1.3"
+  version = "1.1.4"
   vnet_name = var.prov-vnet_name
   vnet_address = var.prov-vnet_address
   rg_name = var.prov-rg-eastus2-name
@@ -22,7 +22,7 @@ module "vnet-module" {
   
   module "subnet" {
   source  = "app.terraform.io/Pooja1892/subnet/azurerm"
-  version = "1.0.6" 
+  version = "1.0.7" 
   vnet_name_new =var.prov-vnet_name
   #vnet_address_new = var.prov-vnet_address
   rg_name_new = var.prov-rg-eastus2-name
