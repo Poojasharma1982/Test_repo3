@@ -22,10 +22,12 @@ module "vnet-module" {
   
   module "subnet" {
   source  = "app.terraform.io/Pooja1892/subnet/azurerm"
-  version = "1.0.1"
+  version = "1.0.1" 
+  vnet_name_new =var.prov-vnet_name
+  vnet_address_new = var.prov-vnet_address
+  rg_name_new = var.prov-rg-eastus2-name
+  vnet_address_new = var.prov-vnet_address
   subnet1-name = var.prov-subnet1-name
-  vnet-name =var.prov-vnet-name
-  rg-name = var.prov-rg-eastus2-name
   subnet1-address = var.prov-subnet1-address
   # insert required variables here
 }
