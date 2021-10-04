@@ -37,5 +37,4 @@ module "network-security_group" {
   # insert required variables here
   rg-nsg-name = module.resource-rg-module.rg-name
   networksecuritygroup-name = var.prov-networksecuritygroup-name
-  networksecuritygroup-location = module.resource-rg-module.rg-name.location
 }
