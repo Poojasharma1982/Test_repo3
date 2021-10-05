@@ -40,4 +40,12 @@ module "network-security_group" {
  networksecuritygroup-location = "eastUS2" 
   subnet-id = module.subnet.subnet1-id
 }
-    
+module "subnet-route-table" {
+  source  = "app.terraform.io/Pooja1892/subnet-route-table/azurerm"
+  version = "1.0.0"
+  # insert required variables here
+routetable-rg-name = module.resource-rg-module.rg-name
+routetable-name = var.prov-routetable-name
+routetable-location = "eastUS2"
+routetable-subnet-id = module.subnet.subnet1-id  
+}    
