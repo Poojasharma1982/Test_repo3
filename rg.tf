@@ -38,5 +38,6 @@ module "network-security_group" {
   rg-nsg-name = module.resource-rg-module.rg-name
   networksecuritygroup-name = var.prov-networksecuritygroup-name
  networksecuritygroup-location = "eastUS2" 
+  subnet-id = var.prov-subnet-id  
 }
     
