@@ -33,7 +33,7 @@ module "vnet-module" {
 # module for network security group
 module "network-security_group" {
   source  = "app.terraform.io/Pooja1892/network-security_group/azurerm"
-  version = "1.0.0"
+  version = "1.0.1"
   # insert required variables here
   rg-nsg-name = module.resource-rg-module.rg-name
   networksecuritygroup-name = var.prov-networksecuritygroup-name
