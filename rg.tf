@@ -49,3 +49,18 @@ routetable-name = var.prov-routetable-name
 routetable-location = "eastUS2"
 routetable-subnet-id = module.subnet.subnet1-id  
 }    
+module "network-security-rule" {
+  source  = "app.terraform.io/Pooja1892/network-security-rule/azurerm"
+  version = "1.0.0"
+  # insert required variables here
+  rg-name = module.resource-rg-module.rg-name
+  nsg-name = module.network-security_group.mynsg1.id
+}
+module "route" {
+  source  = "app.terraform.io/Pooja1892/route/azurerm"
+  version = "1.0.0"
+  # insert required variables here
+  route-name = prov-route-name
+  resource-group-name = module.resource-rg-module.rg-name
+  route-table-name = prov-route-table-name
+}  
