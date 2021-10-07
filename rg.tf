@@ -62,5 +62,5 @@ module "route" {
   # insert required variables here
   route-name = prov-route-name
   resource-group-name = module.resource-rg-module.rg-name
-  route-table-name = prov-route-table-name
+  route-table-name = prov-rt-nsg-name
 }  
