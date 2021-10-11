@@ -72,6 +72,6 @@ module "route" {
   route-name = var.prov-route-name
   resource-group-name = module.resource-rg-module.rg-name
   route-table-name = var.prov-route-table-name
-  address_prefix      = var.prov-add-prefix /list
+  address_prefix      = var.prov-add-prefix
   next_hop_type       = var.prov-next-hop   
 }  
