@@ -60,7 +60,7 @@ module "network-security-rule" {
 }
 module "route" {
   source  = "app.terraform.io/Pooja1892/route/azurerm"
-  version = "1.0.5"
+  version = "1.0.3"
   # insert required variables here
   route-name = prov-route-name
   resource-group-name = module.resource-rg-module.rg-name
