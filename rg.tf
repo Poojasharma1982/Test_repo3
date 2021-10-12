@@ -75,3 +75,14 @@ module "route" {
   address_prefix      = var.prov-add-prefix
   next_hop_type       = var.prov-next-hop   
 }  
+ data "azurerm_resource_group" "newrg" {   
+   name = "demorg"
+ }
+ module "vnet-module" {
+  source  = "app.terraform.io/Pooja1892/vnet-module/azurerm"
+  version = "1.1.4"
+  vnet_name = "demorg-vnet"
+  vnet_address = ["20.0.0.0/24"]
+  rg_name = data.azurerm_resource_group.newrg.name
+  # insert required variables here
+}   
