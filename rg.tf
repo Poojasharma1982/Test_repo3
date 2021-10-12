@@ -78,7 +78,7 @@ module "route" {
  data "azurerm_resource_group" "newrg" {   
    name = "demorg"
  }
- module "vnet-module" {
+ module "demo-vnet-module" {
   source  = "app.terraform.io/Pooja1892/vnet-module/azurerm"
   version = "1.1.4"
   vnet_name = "demorg-vnet"
