@@ -49,32 +49,32 @@ routetable-name = var.prov-routetable-name
 routetable-location = "eastUS2"
 routetable-subnet-id = module.subnet.subnet1-id  
 }    
-module "network-security-rule" {
-  source  = "app.terraform.io/Pooja1892/network-security-rule/azurerm"
-  version = "1.0.1"
-  # insert required variables here
-  rg-name = module.resource-rg-module.rg-name
-  nsg-name = module.network-security_group.mynsg1.id
-  nsgrule-name = var.prov-nsgrule-name
-  priority                    = var.prov-priority
-  direction                   = var.prov-direction
-  access                      = var.prov-access
-  protocol                    = var.prov-protocol
-  source_port_range           = var.prov-source-port
-  destination_port_range      = var.prov-dest-port
-  source_address_prefix       = var.prov-source-add-prefix
-  destination_address_prefix  = var.prov-dest-add-prefix
-}
-module "route" {
-  source  = "app.terraform.io/Pooja1892/route/azurerm"
-  version = "1.0.3"
-  # insert required variables here
-  route-name = var.prov-route-name
-  resource-group-name = module.resource-rg-module.rg-name
-  route-table-name = var.prov-route-table-name
-  address_prefix      = var.prov-add-prefix
-  next_hop_type       = var.prov-next-hop   
-}  
+ # module "network-security-rule" {
+#   source  = "app.terraform.io/Pooja1892/network-security-rule/azurerm"
+#   version = "1.0.1"
+#   # insert required variables here
+#   rg-name = module.resource-rg-module.rg-name
+#   nsg-name = module.network-security_group.mynsg1.id
+#   nsgrule-name = var.prov-nsgrule-name
+#   priority                    = var.prov-priority
+#   direction                   = var.prov-direction
+#   access                      = var.prov-access
+#   protocol                    = var.prov-protocol
+#   source_port_range           = var.prov-source-port
+#   destination_port_range      = var.prov-dest-port
+#   source_address_prefix       = var.prov-source-add-prefix
+#   destination_address_prefix  = var.prov-dest-add-prefix
+# }
+# module "route" {
+#   source  = "app.terraform.io/Pooja1892/route/azurerm"
+#   version = "1.0.3"
+#   # insert required variables here
+#   route-name = var.prov-route-name
+#   resource-group-name = module.resource-rg-module.rg-name
+#   route-table-name = var.prov-route-table-name
+#   address_prefix      = var.prov-add-prefix
+#   next_hop_type       = var.prov-next-hop   
+# }  
  data "azurerm_resource_group" "newrg" {   
    name = "demorg"
  }
