@@ -40,3 +40,43 @@ variable "prov-rt-nsg-name" {
   type = string
   # default = "01000000-0000-4000-8000-000030080200"
 }
+variable "prov-nsgrule-name" {
+  type = string
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+variable "prov-priority" {
+  type = list
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+variable "prov-direction" {
+  type = string
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+variable "prov-access" {
+  type = string
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+variable "prov-protocol" {
+  type = string
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+variable "prov-source-port" {
+  type = string
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+variable "prov-dest-port" {
+  type = string
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+variable "prov-source-add-prefix" {
+  type = string
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+variable "prov-dest-add-prefix" {
+  type = string
+  # default = "01000000-0000-4000-8000-000030080200"
+}
+
+
+
+
