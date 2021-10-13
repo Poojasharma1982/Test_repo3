@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "myresourcegroupnew" {
-   location = "eastus2"
+   location = "centralus"
    name = "resourcegroupnew"
 }
