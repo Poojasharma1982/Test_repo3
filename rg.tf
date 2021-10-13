@@ -64,7 +64,7 @@ routetable-subnet-id = module.subnet.subnet1-id
 #   destination_port_range      = var.prov-dest-port
 #   source_address_prefix       = var.prov-source-add-prefix
 #   destination_address_prefix  = var.prov-dest-add-prefix
-# }
+ }
 # module "route" {
 #   source  = "app.terraform.io/Pooja1892/route/azurerm"
 #   version = "1.0.3"
